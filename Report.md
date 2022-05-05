@@ -16,7 +16,7 @@ The critic network has also 2 fully connected hidden layers with 128 units in th
 
 I used the gradient clipping method as mentined in the benchmark implementation which was also included in the example code. 
 
-The breaktrough moment to reach to a convergign agent was the use of batch normalization on both actor and critic networks. Before that the agent was not reaaly learing and the score was stuck around 1-2. After trying many unsuccesfull variations with the hyperparameters I tried the batch normalization and fortunately it led to the desired score. 
+The breaktrough moment to reach to a convergign agent was the use of batch normalization on both actor and critic networks. Before that the agent was not reaaly learing and the score was stuck around 1-2. After trying many unsuccesfull variations with the hyperparameters I tried the batch normalization and fortunately it led to the desired score. I was still having a peak score of 28-29 and then with further episodes the score was diminishing. Noticing that some randomness can cover the small gap to the target, I played with the random_seed parameter and I reached the target score of 30+. 
 
 #### Hyperparameters
 
@@ -33,7 +33,7 @@ The breaktrough moment to reach to a convergign agent was the use of batch norma
 
 The environment is solved by reaching +30 average scores over 100 episodes after less than 300 episodes. The accumulation of rewards are given in the figure below:
 
-
+<img width="637" alt="image" src="https://user-images.githubusercontent.com/66205537/166912377-7a2f4e4a-aae3-466d-a585-06a3a01fe7ef.png">
 
 #### Future Improvements
 
